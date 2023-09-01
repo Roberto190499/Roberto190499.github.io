@@ -174,41 +174,6 @@
 
 
 <center>
-<?php
-
-require "./administrador/funciones/conecta.html";
-$con = conecta();
-$idU = $_SESSION['idU'];
-$nombre = $_SESSION['nombre'];
-
-
-$sql = "SELECT *
-		FROM banners
-		WHERE status = 1 AND eliminado = 0";
-$res = mysql_query($sql, $con);
-$num = mysql_num_rows($res);
-
-	
-$archivo     = mysql_result($res, 0, "archivo");
-$url         = mysql_result($res, 0, "url");
-$eliminado     = mysql_result($res, 0, "eliminado");
-
-	echo "<div class=\"columna\" ><a href=\"$url\"target=\"_blank\"><img src=\"./administrador/archivos/usuarios/$archivo\"></a></div>";
-/*$archivo     = mysql_result($res, 1, "archivo");
-$url         = mysql_result($res, 1, "url");
-$eliminado     = mysql_result($res, 1, "eliminado");
-
-	echo "<div class=\"columna\" ><a href=\"$url\"target=\"_blank\"><img src=\"./administrador/archivos/usuarios/$archivo\"width=\"600\" height=\"200\"></a></div>";
-
-$i=rand(0, $num-1);
-
-
-$archivo     = mysql_result($res, $i, "archivo");
-$url         = mysql_result($res, $i, "url");
-$eliminado     = mysql_result($res, $i, "eliminado");
-
-	echo "<div class=\"columna\" ><a href=\"$url\"target=\"_blank\"><img src=\"./administrador/archivos/usuarios/$archivo\"width=\"600\" height=\"200\"></a></div>";
-</div></div></center>
 
 </body>
 <footer>
