@@ -1,0 +1,5 @@
+# Archivos que deben ser ignorados
+config.php
+secret-data.txt
+/cache/
+/logs/
