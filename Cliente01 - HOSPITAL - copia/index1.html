@@ -208,50 +208,6 @@ $url         = mysql_result($res, $i, "url");
 $eliminado     = mysql_result($res, $i, "eliminado");
 
 	echo "<div class=\"columna\" ><a href=\"$url\"target=\"_blank\"><img src=\"./administrador/archivos/usuarios/$archivo\"width=\"600\" height=\"200\"></a></div>";
-$n=0;*/
-
-$sql = "SELECT *
-		FROM productos
-		WHERE status = 1 AND eliminado = 0 and stock < 1 AND stock > 0";
-$res = mysql_query($sql, $con);
-$num = mysql_num_rows($res);
-echo "<br><br><center><br><br></center>";
-
-for ($i = 0; $i < $num; $i++){
-if($n<3){
-	$n++;	
-	$id 		= mysql_result($res, $i, "id");
-	$nombre     = mysql_result($res, $i, "nombre");
-	$codigo  = mysql_result($res, $i, "codigo");
-	$costo  = mysql_result($res, $i, "costo");
-	$stock  = mysql_result($res, $i, "stock");
-	$eliminado  = mysql_result($res, $i, "eliminado");
-	$archivo  = mysql_result($res, $i, "archivo");
-	
-    echo "<div class=\"td\"><center>";
-	echo "<button id=\"$id\" onclick=\"window.location='detalle_producto.html?id=$id'\">";
-	echo "<div class=\"concepto2\"><center><img src=\"./administrador/archivos/usuarios/$archivo\" width=\"100\" height=\"100\"></center><br></div>";
-	echo "<div >$id<br></div>";
-	echo "<br><div> $nombre <br></div>";
-	echo "<div >$ $costo<br></div>";
-	echo "<label for=\"cantidad\">cantidad:</label>";
-
-	echo "</button><br>";
-	
-	//echo "<input type=\"number\" name=\"cantidad\" value =\"0\" min=\"0\" max=\"$stock\">";
-	//echo "<input type=\"submit\" value=\"Agregar\" onclick=\"recibe(); return false;\" />";
-	//echo "<div><button>Agregar: <br></button><div>";
-	
-	?>
-<form name="Forma01" method="post" action="salva_carrito.html?id=<?php echo "$id" ?>" >
-    <input type="number" name="cantidad" value ="0" min="0" max="<?php echo "$stock";?>">
-    <input type="submit" value="Agregar" onclick="recibe(); return false;" />
-	</form>
-	<?php
-	echo "</center></div>";
-	}
-}
-?>
 </div></div></center>
 
 </body>
