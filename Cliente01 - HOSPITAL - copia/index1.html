@@ -5,15 +5,15 @@
 	<button class="menu1" onclick="location.href='https://www.facebook.com/profile.php?id=100054213202901'"><img src="./administrador/archivos/diseño/f.png" width="25" height="25"></button>
 	<button class="menu1" onclick="location.href='https://www.instagram.com/rhinosfitnessgym/'"><img src="./administrador/archivos/diseño/i.png" width="25" height="25"></button>
 	<button class="menu1" onclick=""><img src="./administrador/archivos/diseño/t.png" width="25" height="25"> <FONT SIZE=5><b><u> 3332354220</u></b></font></button>
-<a href="Entrenamientos/index.php" class="boton">Inicia sesion</a>
+<a href="Entrenamientos/index.html" class="boton">Inicia sesion</a>
 	<br>
 <br>
 <img src="./administrador/archivos/diseño/logobb12.png" width="150" height="150">
 	
-	<button class="menu" onclick="window.location='ubicacion.php'"  ><img src="./administrador/archivos/diseño/inicio.png" width="25" height="25"><b>  UBICACIÓN</b></button>
-	<button class="menu" onclick="window.location='conocenos.php'" ><img src="./administrador/archivos/diseño/inicio.png" width="25" height="25"><b>  CONOCENOS</b></button>
-	<button class="menu" onclick="window.location='Servicios.php'" ><img src="./administrador/archivos/diseño/inicio.png" width="25" height="25"><b>  SERVICIOS</b></button>
-    <button class="menu2" onclick="window.location='index1.php'" disabled ><img src="./administrador/archivos/diseño/inicio.png" width="25" height="25"><b>  HOME</b></button>
+	<button class="menu" onclick="window.location='ubicacion.html'"  ><img src="./administrador/archivos/diseño/inicio.png" width="25" height="25"><b>  UBICACIÓN</b></button>
+	<button class="menu" onclick="window.location='conocenos.html'" ><img src="./administrador/archivos/diseño/inicio.png" width="25" height="25"><b>  CONOCENOS</b></button>
+	<button class="menu" onclick="window.location='Servicios.html'" ><img src="./administrador/archivos/diseño/inicio.png" width="25" height="25"><b>  SERVICIOS</b></button>
+    <button class="menu2" onclick="window.location='index1.html'" disabled ><img src="./administrador/archivos/diseño/inicio.png" width="25" height="25"><b>  HOME</b></button>
 </div>
 <title>Home</title>
  <script src="Administrador/JS/jquery-3.3.1.min.js"></script>
@@ -22,7 +22,7 @@
      id=<?php echo " $id";?>
 
      document.Forma01.method = 'post'
-     document.Forma01.action = 'salva_carrito.php'
+     document.Forma01.action = 'salva_carrito.html'
      document.Forma01.submit();
 		//  }else(
 		//alert('Error: Faltan campos por llenar');}
@@ -164,7 +164,7 @@
 	seguro con equipos de última generación y entrenadores altamente capacitados.<br>
 	Estamos abiertos de lunes a sábado de 6 am a 11 pm y los domingos de 7 am a 2 pm.<br>
 	Únete a nuestra comunidad hoy para mejorar tu salud y bienestar. ¡Te esperamos!<br><br><br><br><br><br>
-	<button class="h5" onclick="window.location='Socios/index.php'"><b><U>  INSCRIBETE</b></button>
+	<button class="h5" onclick="window.location='Socios/index.html'"><b><U>  INSCRIBETE</b></button>
 
 	<br><br><br><br><br>
 	<button class="play" onclick="location.href='https://youtu.be/TmhvzxQzUrg'" ><img src="./administrador/archivos/diseño/play.png"></button>
@@ -176,7 +176,7 @@
 <center>
 <?php
 
-require "./administrador/funciones/conecta.php";
+require "./administrador/funciones/conecta.html";
 $con = conecta();
 $idU = $_SESSION['idU'];
 $nombre = $_SESSION['nombre'];
@@ -229,7 +229,7 @@ if($n<3){
 	$archivo  = mysql_result($res, $i, "archivo");
 	
     echo "<div class=\"td\"><center>";
-	echo "<button id=\"$id\" onclick=\"window.location='detalle_producto.php?id=$id'\">";
+	echo "<button id=\"$id\" onclick=\"window.location='detalle_producto.html?id=$id'\">";
 	echo "<div class=\"concepto2\"><center><img src=\"./administrador/archivos/usuarios/$archivo\" width=\"100\" height=\"100\"></center><br></div>";
 	echo "<div >$id<br></div>";
 	echo "<br><div> $nombre <br></div>";
@@ -243,7 +243,7 @@ if($n<3){
 	//echo "<div><button>Agregar: <br></button><div>";
 	
 	?>
-<form name="Forma01" method="post" action="salva_carrito.php?id=<?php echo "$id" ?>" >
+<form name="Forma01" method="post" action="salva_carrito.html?id=<?php echo "$id" ?>" >
     <input type="number" name="cantidad" value ="0" min="0" max="<?php echo "$stock";?>">
     <input type="submit" value="Agregar" onclick="recibe(); return false;" />
 	</form>
