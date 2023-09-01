@@ -1,0 +1,57 @@
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Gimnasio XYZ</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(18,18,18,1) 50%, rgba(0,0,0,1) 100%);
+			color: #fff;
+			font-family: sans-serif;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+		}
+
+		h1 {
+			font-size: 4rem;
+			margin-bottom: 1rem;
+			text-align: center;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+
+		.boton {
+			display: block;
+			padding: 1rem 2rem;
+			font-size: 1.5rem;
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			color: #fff;
+			background-color: #E84C3D;
+			border-radius: 1rem;
+			border: none;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			margin: 1rem 0;
+			box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+		}
+
+		.boton:hover {
+			background-color: #FF5733;
+			transform: translateY(-0.2rem);
+			box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+		}
+	</style>
+</head>
+<body>
+	<h1>Bienvenido a Rhino's Fitness Gym</h1>
+        <a href="Cliente01 - HOSPITAL - copia/index1.php" class="boton">Inicio</a>
+        <a href="Cliente01 - HOSPITAL - copia/index.php" class="boton">Administrador</a>
+      </div>
+    </div>
+  </body>
+</html>
